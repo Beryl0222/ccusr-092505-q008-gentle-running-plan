@@ -1,0 +1,9 @@
+{
+  "event_id": "092505-008-sample-001",
+  "event_type": "SCREENING_APPROVED",
+  "aggregate_type": "participant_screening",
+  "aggregate_id": "gentle_running_plan-001",
+  "occurred_at": "2026-09-24T12:00:00+08:00",
+  "version": 1,
+  "summary": "已登记一条可供联调的领域事实"
+}
