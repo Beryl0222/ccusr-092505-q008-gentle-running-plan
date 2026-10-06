@@ -1,5 +1,5 @@
 [project]
 name = "gentle-running-plan"
 version = "0.1.0"
-description = "超慢跑个体处方引擎领域契约"
+description = "超慢跑个体处方引擎：事件溯源、风险授权、安全暂停与可解释处方"
 requires-python = ">=3.11"

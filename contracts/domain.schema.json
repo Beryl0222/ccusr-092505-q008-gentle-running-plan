@@ -20,11 +20,20 @@
       "type": "string",
       "enum": [
         "SCREENING_APPROVED",
+        "SCREENING_SUBMITTED",
+        "REVIEW_RECORDED",
+        "REVIEW_CLEARED",
         "PLAN_PUBLISHED",
+        "PLAN_ADJUSTED",
         "SESSION_LOGGED",
+        "REPORT_CONFLICTED",
         "SAFETY_PAUSED",
-        "PLAN_RESUMED"
-      ]
+        "PLAN_RESUMED",
+        "REMINDER_REQUESTED",
+        "REMINDER_DELIVERED",
+        "REMINDER_CANCELLED"
+      ],
+      "description": "筛查通过/登记、专业复核、计划发布/调整、训练记录/冲突、安全暂停/恢复、提醒排期/投递/作废"
     },
     "aggregate_type": {
       "type": "string",
@@ -32,20 +41,24 @@
         "participant_screening",
         "exercise_plan",
         "training_session",
-        "safety_report"
+        "safety_report",
+        "reminder"
       ]
     },
     "aggregate_id": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "description": "聚合流标识，约定前缀：participant: / plan: / session:<参与者>:<课次> / safety: / reminder:"
     },
     "occurred_at": {
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "description": "事实发生时间，必须带时区"
     },
     "version": {
       "type": "integer",
-      "minimum": 1
+      "minimum": 1,
+      "description": "聚合流内从 1 连续递增，存储层做乐观并发校验"
     },
     "summary": {
       "type": "string",
